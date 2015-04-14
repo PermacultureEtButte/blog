@@ -1,0 +1,44 @@
+# On empêche l'indexation des dossiers sensibles
+Disallow: /wp-admin
+Disallow: /wp-includes
+Disallow: /wp-content/plugins
+Disallow: /wp-content/cache
+Disallow: /wp-content/themes
+Disallow: /trackback
+Disallow: /feed
+Disallow: /category/*/*
+Disallow: */trackback
+Disallow: */feed
+Disallow: /*.pdf$
+# On désindexe tous les URL ayant des paramètres (duplication de contenu)
+Disallow: /*?*
+Disallow: /*?
+# On désindexe la page de connexion (contenu inutile)
+Disallow: /wp-login.php
+
+# On autorise l'indexation des images
+Allow: /wp-content/uploads
+
+User-agent: Googlebot
+# On empêche l'indexation des fichiers sensibles
+Disallow: /*.php$
+Disallow: /*.inc$
+Disallow: /*.gz$
+Disallow: /*.swf$
+Disallow: /*.wmv$
+Disallow: /*.cgi$
+Disallow: /*.pdf$
+
+# Autoriser Google Image
+User-agent: Googlebot-Image
+Disallow:
+Allow: /*
+
+# Autoriser Google AdSense
+User-agent: Mediapartners-Google*
+Disallow:
+Allow: /*
+
+# On indique au spider le lien vers notre sitemap
+# Note : Indiquez bien le lien vers votre sitemap. Rendez-vous dans la section Sitemaps XML de WordPress SEO pour en obtenir le lien
+Sitemap: http://104.155.63.185/sitemap_index.xml
